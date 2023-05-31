@@ -1,0 +1,14 @@
+name: Run a few commands on macOS runner
+
+on: workflow_dispatch
+
+jobs:
+  Run-nodejs-check:
+    runs-on: macos-13
+    timeout-minutes: 2
+    steps:
+      - name: Check nodejs
+        run: node -v
+      
+      - name: Check nvm
+        run: nvm ls
