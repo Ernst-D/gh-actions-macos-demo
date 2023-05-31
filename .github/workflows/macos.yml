@@ -10,5 +10,9 @@ jobs:
       - name: Check nodejs
         run: node -v
       
-      - name: Check nvm
-        run: nvm ls
+      - name: Install appium doctor
+        run: npm install @appium/doctor -g
+
+      - name: Run appium doctor
+        run: appium-doctor
+
